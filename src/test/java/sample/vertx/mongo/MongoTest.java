@@ -2,12 +2,16 @@ package sample.vertx.mongo;
 
 import java.util.List;
 
+import org.junit.Test;
+
 import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.mongo.MongoClient;
 
-public class Mongo {
-	public static void main(String[] args) {
+public class MongoTest {
+
+	@Test
+	public void test() {
 		Vertx vertx = Vertx.vertx();
 		JsonObject config = new JsonObject();
 		config.put("db_name", "vertx");

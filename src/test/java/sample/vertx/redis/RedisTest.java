@@ -1,11 +1,15 @@
 package sample.vertx.redis;
 
+import org.junit.Test;
+
 import io.vertx.core.Vertx;
 import io.vertx.redis.RedisClient;
 import io.vertx.redis.RedisOptions;
 
-public class Redis {
-	public static void main(String[] args) {
+public class RedisTest {
+
+	@Test
+	public void test() {
 		Vertx vertx = Vertx.vertx();
 		RedisOptions config = new RedisOptions().setHost("192.168.1.58").setAuth("1234");
 		RedisClient client = RedisClient.create(vertx, config);
