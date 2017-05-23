@@ -1,5 +1,8 @@
 package sample.vertx.common;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 import java.io.Serializable;
 import java.time.Instant;
 
@@ -53,4 +56,8 @@ public class User implements Serializable {
         this.createdAt = createdAt;
     }
 
+    @Override
+    public String toString() {
+        return ToStringBuilder.reflectionToString(this, ToStringStyle.JSON_STYLE);
+    }
 }
